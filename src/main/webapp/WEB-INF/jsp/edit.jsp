@@ -24,7 +24,7 @@
     <form:label path="availability">Availability</form:label><br/>
     <form:input type="text" path="availability"/><br/><br/>
     <b>Add more images</b><br />
-    <input type="file" name="attachments" multiple="multiple"/><br/><br/>
+    <input type="file" name="attachments" multiple="multiple" accept="image/*"/><br/><br/>
     <input type="submit" value="Save"/><br/><br/>
 </form:form>
 <a href="<c:url value="/ticket" />">Return to book list</a>

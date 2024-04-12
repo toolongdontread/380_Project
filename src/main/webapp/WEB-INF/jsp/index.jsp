@@ -43,14 +43,7 @@
         <c:forEach items="${ticketDatabase}" var="entry">
             <a href="<c:url value="/ticket/view/${entry.id}" />">
                 <c:out value="${entry.subject}"/></a>
-            (customer: <c:out value="${entry.customerName}"/>)
-            <security:authorize access="hasRole('ADMIN') or
-            principal.username=='${entry.customerName}'">
-                [<a href="<c:url value="/ticket/edit/${entry.id}" />">Edit</a>]
-            </security:authorize>
-            <security:authorize access="hasRole('ADMIN')">
-                [<a href="<c:url value="/ticket/delete/${entry.id}" />">Delete</a>]
-            </security:authorize>
+            (Added by: <c:out value="${entry.customerName}"/>)
             <br/>
         </c:forEach>
     </c:otherwise>

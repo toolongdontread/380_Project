@@ -18,7 +18,7 @@
 
 <c:choose>
     <c:when test="${fn:length(ticketDatabase) == 0}">
-        <i>There are no tickets in the system.</i>
+        <i>There are no books in the system.</i>
     </c:when>
     <c:otherwise>
         <c:forEach items="${ticketDatabase}" var="entry">
